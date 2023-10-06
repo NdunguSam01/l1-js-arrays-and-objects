@@ -1,130 +1,129 @@
 // Utility
-function print(tag, value){
+function print(tag, value)
+{
     console.info(tag, value)
 }
 
 // 1. ARRAYS
 // TODO: Complete the function. Create an array that contains numbers
-function scores (){
+function scores ()
+{
     // create array with 10 elements
+    const myScores=[90,27,61,89,51,45,28,52,92,17]
 
-    // return the array
+    return myScores
 
 }
-// display value
-// print(`Scores Array:`, scores())
-
-
+print(`Scores Array:`, scores())
 
 // TODO: Access an element from the array
-function accessScore(){
+function accessScore()
+{
     // using array above access the 3rd element
-
-    // return the elememt
+    let thirdElement=scores()[2]
+    return thirdElement
 }
-// display value
-// print(`Third Score:`, accessScore())
+print(`Third Score:`, accessScore())
 
 
 // TODO: Create an array that has multiple nested arrays
-function nestedScores(){
+function nestedScores()
+{
     // create an array with 3 elements. (The first two elements should be arrays of 2 elements each)
-
-    // return the nested arrays
+    let nest=[[6,7], [9,10],[8,20,19,203]]
+    return nest
 }
-// display value
-// print(`Nested Score Array:`, nestedScores())
-
+print(`Nested Score Array:`, nestedScores()[2][3])
 
 // TODO: Some array methods (length)
-function getNumberOfScores(){
+function getNumberOfScores()
+{
     // using either of the two arrays created above get the length of the array
-
-    // return the number of elements
-
+    return scores().length
 }
-// display value
-// print(`Number of elements:`, getNumberOfScores())
-
+print(`Number of elements:`, getNumberOfScores())
 
 // TODO: Some array methods
-function addElement(){
+function addElement()
+{
     // using either of the two arrays created above, add two new elements of your choice
-
-    // return the new array with the elements that have been added
-
+    let newScores=scores()
+    let newElement=8
+    newScores.push(newElement)
+    
+    return newScores
 }
 // display value
-// print(`Added elements:`, addElement())
-
-
+print(`Added elements:`, addElement())
 
 // 2. OBJECTS
 // TODO: Create an student object with the follwoing properties [name, age, email, studentNumber, isKenyan]
-function student(){
+function student()
+{
     // create student object
-
-    // return student object
+    let student=
+    {
+        name: "Samuel Muigai",
+        age: 22,
+        email: "samuel.muigai@student.moringaschool.com",
+        studentNumber: "SDF-FT07-001",
+        isKenyan: true
+    }
+    return student
 }
-// display value
-// print(`Student:`, student())
+print(`Student:`, student())
 
 // TODO: Access student's age
-function studentAge(){
+function studentAge()
+{
     // access student age using key
-
-
-    // return student age
-
+    return student()["age"]
 }
-// display value
-// print(`Student Age:`, studentAge())
-
+print(`Student Age:`, studentAge())
 
 // TODO: Access student's age
-function studentEmail(){
+function studentEmail()
+{
     // access student email using dot operator
-
-
-    // return student email
-
+    return student().email
 }
-// display value
-// print(`Student Email:`, studentEmail())
-
+print(`Student Email:`, studentEmail())
 
 // TODO(nested objects): create user object that contains course object => [User(id, name, course), Course(name, number)]
-function user(){
+function user()
+{
     // create user object
-
-
-    // return user object
-
+    let userObject=
+    {
+        user:
+        {
+            id: "1234abcd",
+            name: "Samuel Muigai",
+            course: "Software Engineering"
+        },
+        course:
+        {
+            name: "Software Engineering",
+            number: "SDF-FT-07"
+        }
+    }
+    console.log(userObject.user.name)
+    return userObject
 }
-// display value
-// print(`User:`, user())
-
+print(`User:`, user())
 
 // TODO: Some object methods (entries)
-function getUserEntries(){
+function getUserEntries()
+{
     // get user entries
-
-
-    // return entries
-
+    return Object.entries(user())
 }
-// display value
-// print(`User Entries:`, getUserEntries())
-
+print(`User Entries:`, getUserEntries())
 
 // TODO: Some object methods (keys)
-function getUserKeys(){
+function getUserKeys()
+{
     // get user keys
-
-
-    // return keys
-
+    return Object.keys(user())
 }
-// display value
-// print(`User Keys:`, getUserKeys())
-
+print(`User Keys:`, getUserKeys())
